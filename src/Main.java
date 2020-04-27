@@ -1,16 +1,34 @@
 public class Main {
     public static void main(String[] args){
-        int isiGelas = 0;
-        int penuh = 100;
+        double[][] nilaiMahasiswa = new double[5][30];
 
-        System.out.println("Isi Gelas Sekarang :" + isiGelas + "ml");
-        System.out.println("Isi Gelas Ketika Penuh :" + penuh + "ml");
+        nilaiMahasiswa[0][0] = 80;
+        nilaiMahasiswa[1][0] = 90;
+        nilaiMahasiswa[2][0] = 75;
+        nilaiMahasiswa[3][0] = 70;
 
-        for (isiGelas = 0 ; isiGelas <= penuh ; isiGelas++);{
-            System.out.println("Sedang Mengisi Gelas..");
-            System.out.println("Isi Gelas Sekarang : " + isiGelas + "ml");
+        nilaiMahasiswa[4][0] = nilaiMahasiswa[0][0] * 0 +
+                nilaiMahasiswa[1][0] *  1 +
+                nilaiMahasiswa[2][0] *  2 +
+                nilaiMahasiswa[3][0] *  3;
+
+        System.out.println("Nilai si mahasiswa 1 :"+nilaiMahasiswa[4][0]);
+
+        nilaiMahasiswa[0][0] = 80;
+        nilaiMahasiswa[1][0] = 90;
+        nilaiMahasiswa[2][0] = 75;
+        nilaiMahasiswa[3][0] = 70;
+
+        nilaiMahasiswa[4][1] = 0;
+        for (int i=0 ; i<=3 ; i++){
+            nilaiMahasiswa[4][1] += nilaiMahasiswa[i][1] *  i;
         }
+        System.out.println("Nilai si mahasiswa 1 :"+nilaiMahasiswa[4][1]);
 
-        System.out.println("Finale : Isi Gelas Sekarang : " + isiGelas + "ml");
+        double jumlahNilaiAkhir = 0;
+        for (int i=0 ; i<=3 ; i++){
+            jumlahNilaiAkhir += nilaiMahasiswa[4][i];
+        }
+        System.out.println(jumlahNilaiAkhir);
     }
 }
